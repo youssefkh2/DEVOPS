@@ -10,7 +10,7 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 
-                git branch: 'master', url: 'https://github.com/mhassini/timesheet-devops.git'
+                git branch: 'master', url: 'https://github.com/youssefkh2/DEVOPS.git'
             }
         }
 
