@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'jdk17'
+        maven 'maven3'
+    }
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                
+                git branch: 'master', url: 'https://github.com/mhassini/timesheet-devops.git'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                
+                sh 'mvn clean compile'
+            }
+        }
+    }
+}
